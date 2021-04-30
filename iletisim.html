@@ -1,0 +1,127 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KUBİLAY AKŞAHİN</title>
+<p
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+
+<script type="text/javascript">
+
+function formKontrol()
+{
+    adi= document.getElementById("ad").value;
+   
+   if (adi=="")
+        alert("Lütfen tüm alanları doldurunuz.");
+   else
+   {
+      if (adi.length<3)
+           alert("En az 3 karakter giriniz");
+      else 
+          alert("Formu gönderebilirsiniz...");
+   }
+}   
+  
+   
+   
+   
+   
+   
+   
+
+</script>
+
+<script type="text/javascript">
+
+function mailKontrol()
+{
+var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+var mail = document.getElementById("mail").value;
+if(reg.test(mail) == false) 
+    {
+      alert('Hatalı Mail Formatı!');
+      return false;
+    }
+else{
+    
+      return true;	  
+    }
+}
+
+</script>
+
+
+
+
+</head>
+
+<body>
+
+<header>
+		
+		<nav>
+			<li><a href="index.html">Hakkında</a></li>
+			<li><a href="erbaa.html" target="_blank">Şehrim</a></li>
+			<li><a href="#">Mirasımız</a></li>
+			<li><a href="#">Özgeçmiş</a></li>
+			<li><a href="giris.html">Giriş</a></li>
+			<li><a href="iletisim.html">İletişim</a></li>
+		</nav>
+	</header>
+
+<section class="Hakkımda">
+		<h3 class="title">İletişim Formu</h3>
+
+
+
+<div align="center">
+
+
+
+<form method="post" action="mailto:isim@mail.com">
+<input name="id" type="hidden" value="1775">
+<table cellpadding="10px" border="0">
+<tr>
+<td align="right">Adınız : </td>
+<td><input name="sender_name" type="text" id="ad"></td>
+</tr>
+<tr>
+<td align="right">e-Mail : </td>
+<td><input name="sender_email" type="text" id="mail"></td>
+
+
+</tr>
+<tr>
+<td align="right">Konu : </td>
+<td><input name="subject" type="text" id="ad"></td>
+</tr>
+<tr>
+<td align="right" valign="top">Mesaj : </td>
+<td>
+<textarea rows="10" cols="40" name="message" id="ad">
+</textarea></td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<button type="reset" value="Temizle">Temizle</button>
+<input value="Gönder" name="send" type="submit" id="send" style="width:100;color:#ff0000;" onclick="mailKontrol(),formKontrol()"></td>
+
+
+</tr>
+</table>
+<p>&nbsp;</p>
+</form>
+
+
+
+</div>
+</section>
+</body>
+
+</html>
